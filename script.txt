@@ -1,0 +1,5 @@
+for development
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+for product
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>

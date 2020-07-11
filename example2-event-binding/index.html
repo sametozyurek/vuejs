@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js example1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" v-on:keypress.enter="keyp($event)"/>
+        <button v-on:click="arttir()">Sayi Arttir</button>
+        <p v-text="sayi"></p>
+    </div>
+
+    <script>
+
+        new Vue({
+            el : "#app",
+            data : {
+                sayi : 0
+            },
+            methods : {
+                arttir(){
+                    this.sayi++
+                },
+
+                keyp(gelenEvent){
+                    this.sayi += parseInt(gelenEvent.target.value);
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>
